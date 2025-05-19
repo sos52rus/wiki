@@ -1,0 +1,74 @@
+.datagrid {
+    border-collapse: collapse;
+    font-size: 12px;
+    margin: 2px 0 5px;
+}
+
+.tableServiceDesc {
+  max-width: 400px;
+}
+
+.tableServiceDesc th {
+    font-size: 12px;
+}
+
+.tableEvents {
+  max-width: 800px;
+}
+
+.tableOutData {
+  max-width: 1200px;
+}
+
+.datagrid th {
+    background: #f0f0f0;
+    border: 1px solid #CCC;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    padding: 2px 4px;
+    text-align: center
+}
+
+.datagrid td {
+    border: 1px solid #CCC;
+    padding: 3px 4px
+}
+.watermark {
+  position:fixed;
+  left:30px;
+  top:400px;
+  z-index:999;
+  transform:rotate(-45deg);
+  opacity:0.05;
+  color:lightgrey;
+  font-size:95pt;
+  border:10pt solid lightgrey;
+  border-radius:20pt;
+  padding:20pt;
+}
+
+@media print{
+  .grid {
+    width: 100%; !impotant;
+  }
+  .noprint{ display:none;}
+  @page rotated {
+     page-orientation: rotate-left;
+  }
+
+  .landscape-content {
+      break-before: always;
+      break-after: always;
+      page: rotated;
+	  transform-origin: top left;
+	  transform: translateX(100vw) rotate(90deg);
+	  width: 98vh;
+	  height: 95vw;
+  }
+}
+
+@media screen{
+  .noscreen {display:none; }
+  .grid {
+    max-width: 300cm;
+  }
+}

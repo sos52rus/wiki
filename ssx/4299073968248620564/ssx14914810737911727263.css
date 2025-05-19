@@ -1,0 +1,5 @@
+@supports (counter-set:nh1){
+#xwikicontent, body[contenteditable="true"] {counter-reset: nh1 nh2 nh3 nh4 nh5 nh6;
+}
+}
+

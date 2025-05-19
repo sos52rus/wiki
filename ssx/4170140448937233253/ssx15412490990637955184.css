@@ -1,0 +1,161 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                    
+
+#admin-page-content h2.wikigeneratedheader,
+#admin-page-content .xform h2 {
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 150%;
+  line-height: inherit;
+  margin-bottom: 1em;
+}
+
+#admin-page-content h2.wikigeneratedheader:first-of-type,
+#admin-page-content .xform h2:first-of-type {
+  margin-top: 0;
+}
+
+#admin-page-content label > input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+#admin-page-content label > input[type="radio"] {
+  vertical-align: baseline;
+}
+                  
+#admin-page-content .usersorgroupsnames label > input[type="radio"] {
+  vertical-align: unset;
+}
+
+/**
+ * Category Overview
+ */
+
+.admin-category {
+  list-style: none outside none;
+  margin: 0 !important;
+  float: left;
+}
+
+.admin-category li {
+  clear: left;
+  color: #b3b3b3;
+  margin: 0 1.5em 2em 0;
+  overflow: hidden;
+}
+
+.admin-category strong {
+  font-size: 1.44em;
+  line-height: 2em;
+}
+
+.admin-category img {
+  float: left;
+  margin: 0 1em 0 0;
+}
+
+.admin-category .description {
+  font-size: .9em;
+  display: block;
+}
+
+/**
+ * Users & Rights
+ */
+
+/* Override general table styles. */
+/* TODO: Move to livetable.css */
+
+#usersandgroupstable td, #alldocstable td {
+  border-color: transparent;
+}
+
+#admin-page-content .usersorgroupsnames {
+  white-space: nowrap;
+  /* Triple of the value for the .right column. This is useful to make sure the columns are somewhat balanced when
+    there is only one right (e.g., extension rights with a default flavor).
+    Keeping them balanced is useful to make sure the filters are displayed properly, which is especially important
+    on a subwiki where we have to find a place to display the scope selector. */
+  width: 27%;
+}
+
+#usersandgroupstable-filters-scope {
+  white-space: nowrap;
+}
+
+#usersandgroupstable-filters #name {
+    width: 65%;
+}
+
+.rights-settings {
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.rights-settings dt {
+  /* The labels for the general rights settings are long and thus look bad when displayed with bold text. */
+  font-weight: normal;
+}
+
+.rights-settings dt input {
+  vertical-align: top;
+}
+
+.xform #usersandgroupstable select {
+  width: unset;
+}
+
+/**
+ * Bootstrap's Accordion Menu
+ */
+
+.admin-menu {
+  /* Align the menu with the page title. */
+  padding-left: 0;
+}
+
+.admin-menu .panel-heading.collapsed {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.admin-menu a.panel-heading {
+  display: flex;
+  font-size: 100%;
+}
+
+.admin-menu a.panel-heading span {
+  flex-grow: 1;
+}
+
+.admin-menu a.panel-heading:not(.collapsed) {
+  background-color: #fff;
+  color: #4582EC;
+}
+
+/* Rotate the carret on collapse. */
+.admin-menu a.panel-heading.collapsed > *:last-child {
+  transform: rotate(90deg);
+}
+
+.admin-menu a.panel-heading > *:last-child {
+  transition: transform 200ms ease-in-out;
+}
+
+.admin-menu a.panel-heading:active,
+.admin-menu a.panel-heading:focus,
+.admin-menu a.panel-heading:hover {
+  text-decoration: none;
+}
+
+.admin-menu .panel-heading > span > *:first-child {
+  margin-right: .8em;
+}
+
+.admin-menu .panel-collapse > .list-group:last-child .list-group-item.last {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.admin-menu .panel.noitems > .panel-heading {
+  color: #b3b3b3;
+}

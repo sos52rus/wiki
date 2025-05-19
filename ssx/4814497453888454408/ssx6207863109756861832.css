@@ -1,0 +1,19 @@
+#watchModal {
+  text-align: left;
+}
+.panel-heading a {
+  color: black;
+}
+.panel-radio {
+  padding: 8px 15px;
+}
+.help-icon {
+  float: right;
+}
+.panel-group .panel.wiki-option {
+  margin-top: 2em;
+}
+.panel-title > label {
+  font-weight: unset;
+  display: inline;
+}

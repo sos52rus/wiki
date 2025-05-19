@@ -1,0 +1,193 @@
+
+
+/* Legacy browser support, could be removed when Safari < 17.2 looses enough market share to be irrelevant if it was not for pagedjs (see below). */
+
+      .numbered-content-root  > h1:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child ,       .numbered-content-root > .xwiki-metadata-container  > h1:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child    {
+/* This is not strictly necessary apart from counter initialization for a global start value. */
+counter-reset: ch1 ch2 ch3 ch4 ch5 ch6 !important;
+}
+
+      .numbered-content-root  > h2:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child ,       .numbered-content-root > .xwiki-metadata-container  > h2:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child    {
+/* This is not strictly necessary apart from counter initialization for a global start value. */
+counter-reset: ch2 ch3 ch4 ch5 ch6  !important;
+}
+
+      .numbered-content-root  > h3:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child ,       .numbered-content-root > .xwiki-metadata-container  > h3:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child    {
+/* This is not strictly necessary apart from counter initialization for a global start value. */
+counter-reset: ch3 ch4 ch5 ch6  !important;
+}
+
+      .numbered-content-root  > h4:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child ,       .numbered-content-root > .xwiki-metadata-container  > h4:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child    {
+/* This is not strictly necessary apart from counter initialization for a global start value. */
+counter-reset: ch4 ch5 ch6  !important;
+}
+
+      .numbered-content-root  > h5:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child ,       .numbered-content-root > .xwiki-metadata-container  > h5:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child    {
+/* This is not strictly necessary apart from counter initialization for a global start value. */
+counter-reset: ch5 ch6  !important;
+}
+
+      .numbered-content-root  > h6:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child ,       .numbered-content-root > .xwiki-metadata-container  > h6:not([data-xwiki-rendering-protected]):not([data-numbered-headings-start]):first-child    {
+/* This is not strictly necessary apart from counter initialization for a global start value. */
+counter-reset: ch6 !important;
+}
+
+      .numbered-content-root  h1:not([data-xwiki-rendering-protected])::before ,       .numbered-content-root > .xwiki-metadata-container  h1:not([data-xwiki-rendering-protected])::before    {
+content: counter(ch1) '\00a0';
+}
+
+      .numbered-content-root  h1:not([data-xwiki-rendering-protected]) ,       .numbered-content-root > .xwiki-metadata-container  h1:not([data-xwiki-rendering-protected])    {
+counter-reset: ch2 ch3 ch4 ch5 ch6;
+counter-increment: ch1;
+}
+
+      .numbered-content-root  h2:not([data-xwiki-rendering-protected])::before ,       .numbered-content-root > .xwiki-metadata-container  h2:not([data-xwiki-rendering-protected])::before    {
+content: counter(ch1) '.' counter(ch2) '\00a0';
+}
+
+      .numbered-content-root  h2:not([data-xwiki-rendering-protected]) ,       .numbered-content-root > .xwiki-metadata-container  h2:not([data-xwiki-rendering-protected])    {
+counter-reset: ch3 ch4 ch5 ch6;
+counter-increment: ch2;
+}
+
+      .numbered-content-root  h3:not([data-xwiki-rendering-protected])::before ,       .numbered-content-root > .xwiki-metadata-container  h3:not([data-xwiki-rendering-protected])::before    {
+content: counter(ch1) '.' counter(ch2) '.' counter(ch3) '\00a0';
+}
+
+      .numbered-content-root  h3:not([data-xwiki-rendering-protected]) ,       .numbered-content-root > .xwiki-metadata-container  h3:not([data-xwiki-rendering-protected])    {
+counter-reset: ch4 ch5 ch6;
+counter-increment: ch3;
+}
+
+      .numbered-content-root  h4:not([data-xwiki-rendering-protected])::before ,       .numbered-content-root > .xwiki-metadata-container  h4:not([data-xwiki-rendering-protected])::before    {
+content: counter(ch1) '.' counter(ch2) '.' counter(ch3) '.' counter(ch4) '\00a0';
+}
+
+      .numbered-content-root  h4:not([data-xwiki-rendering-protected]) ,       .numbered-content-root > .xwiki-metadata-container  h4:not([data-xwiki-rendering-protected])    {
+counter-reset: ch5 ch6;
+counter-increment: ch4;
+}
+
+      .numbered-content-root  h5:not([data-xwiki-rendering-protected])::before ,       .numbered-content-root > .xwiki-metadata-container  h5:not([data-xwiki-rendering-protected])::before    {
+content: counter(ch1) '.' counter(ch2) '.' counter(ch3) '.' counter(ch4) '.' counter(ch5) '\00a0';
+}
+
+      .numbered-content-root  h5:not([data-xwiki-rendering-protected]) ,       .numbered-content-root > .xwiki-metadata-container  h5:not([data-xwiki-rendering-protected])    {
+counter-reset: ch6;
+counter-increment: ch5;
+}
+
+      .numbered-content-root  h6:not([data-xwiki-rendering-protected])::before ,       .numbered-content-root > .xwiki-metadata-container  h6:not([data-xwiki-rendering-protected])::before    {
+content: counter(ch1) '.' counter(ch2) '.' counter(ch3) '.' counter(ch4) '.' counter(ch5) '.' counter(ch6) '\00a0';
+}
+
+      .numbered-content-root  h6:not([data-xwiki-rendering-protected]) ,       .numbered-content-root > .xwiki-metadata-container  h6:not([data-xwiki-rendering-protected])    {
+counter-increment: ch6;
+}
+
+      .numbered-content-root  h1[data-numbered-headings-start] ,       .numbered-content-root > .xwiki-metadata-container  h1[data-numbered-headings-start]    {
+counter-reset: ch1 var(--numbered-headings-start) ch2 ch3 ch4 ch5 ch6;
+}
+
+      .numbered-content-root  h2[data-numbered-headings-start] ,       .numbered-content-root > .xwiki-metadata-container  h2[data-numbered-headings-start]    {
+counter-reset: ch2 var(--numbered-headings-start) ch3 ch4 ch5 ch6;
+}
+
+      .numbered-content-root  h3[data-numbered-headings-start] ,       .numbered-content-root > .xwiki-metadata-container  h3[data-numbered-headings-start]    {
+counter-reset: ch3 var(--numbered-headings-start) ch4 ch5 ch6;
+}
+
+      .numbered-content-root  h4[data-numbered-headings-start] ,       .numbered-content-root > .xwiki-metadata-container  h4[data-numbered-headings-start]    {
+counter-reset: ch4 var(--numbered-headings-start) ch5 ch6;
+}
+
+      .numbered-content-root  h5[data-numbered-headings-start] ,       .numbered-content-root > .xwiki-metadata-container  h5[data-numbered-headings-start]    {
+counter-reset: ch5 var(--numbered-headings-start) ch6;
+}
+
+      .numbered-content-root  h6[data-numbered-headings-start] ,       .numbered-content-root > .xwiki-metadata-container  h6[data-numbered-headings-start]    {
+counter-reset: ch6 var(--numbered-headings-start);
+}
+
+/* Newer browser support based on counter-set. */
+@supports (counter-set: nh1) {
+  /* Initialize the counters once on the root elements so they are consistently available for all headings. */
+        .numbered-content-root   ,       .numbered-content-root > .xwiki-metadata-container      {
+    counter-reset: nh1 nh2 nh3 nh4 nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h1:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h1:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h1:not([data-xwiki-rendering-protected])::before    {
+    content: counter(nh1) '\00a0';
+    counter-increment: nh1;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h1:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h1:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h1:not([data-xwiki-rendering-protected])    {
+    counter-set: nh2 nh3 nh4 nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h2:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h2:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h2:not([data-xwiki-rendering-protected])::before    {
+    content: counter(nh1) '.' counter(nh2) '\00a0';
+    counter-increment: nh2;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h2:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h2:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h2:not([data-xwiki-rendering-protected])    {
+    counter-set: nh3 nh4 nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h3:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h3:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h3:not([data-xwiki-rendering-protected])::before    {
+    content: counter(nh1) '.' counter(nh2) '.' counter(nh3) '\00a0';
+    counter-increment: nh3;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h3:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h3:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h3:not([data-xwiki-rendering-protected])    {
+    counter-set: nh4 nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h4:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h4:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h4:not([data-xwiki-rendering-protected])::before    {
+    content: counter(nh1) '.' counter(nh2) '.' counter(nh3) '.' counter(nh4) '\00a0';
+    counter-increment: nh4;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h4:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h4:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h4:not([data-xwiki-rendering-protected])    {
+    counter-set: nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h5:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h5:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h5:not([data-xwiki-rendering-protected])::before    {
+    content: counter(nh1) '.' counter(nh2) '.' counter(nh3) '.' counter(nh4) '.' counter(nh5) '\00a0';
+    counter-increment: nh5;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h5:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h5:not([data-xwiki-rendering-protected]) ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h5:not([data-xwiki-rendering-protected])    {
+    counter-set: nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h6:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h6:not([data-xwiki-rendering-protected])::before ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h6:not([data-xwiki-rendering-protected])::before    {
+    content: counter(nh1) '.' counter(nh2) '.' counter(nh3) '.' counter(nh4) '.' counter(nh5) '.' counter(nh6) '\00a0';
+    counter-increment: nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h1[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h1[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h1[data-numbered-headings-start]    {
+    counter-set: nh1 var(--numbered-headings-start) nh2 nh3 nh4 nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h2[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h2[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h2[data-numbered-headings-start]    {
+    counter-set: nh2 var(--numbered-headings-start) nh3 nh4 nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h3[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h3[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h3[data-numbered-headings-start]    {
+    counter-set: nh3 var(--numbered-headings-start) nh4 nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h4[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h4[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h4[data-numbered-headings-start]    {
+    counter-set: nh4 var(--numbered-headings-start) nh5 nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h5[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h5[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h5[data-numbered-headings-start]    {
+    counter-set: nh5 var(--numbered-headings-start) nh6;
+  }
+
+        #body[contenteditable="true"] .numbered-content-root  h6[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]) .numbered-content-root  h6[data-numbered-headings-start] ,       #xwikicontent:not([data-id="xwikicontent"]).numbered-content-root  h6[data-numbered-headings-start]    {
+    counter-set: nh6 var(--numbered-headings-start);
+  }
+}
+

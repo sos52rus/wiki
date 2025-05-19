@@ -1,0 +1,11 @@
+/* show-hint.css required to properly display the autocomplete hints. */
+@import "../../webjars/codemirror/5.56.0-xwiki/addon/hint/show-hint.css";
+
+/* Overrides for the hint containers */
+.CodeMirror-hint {
+  /* Stretch to the longest entry. */
+  max-width: 100%;
+  /* Add right padding so the scrollbar does not cover the ending of the longest entry. */
+  padding-right: 1em;
+}
+

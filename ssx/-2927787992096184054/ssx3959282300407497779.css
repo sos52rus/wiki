@@ -1,0 +1,135 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                    
+/***********************************************
+ * Notification Container
+ ***********************************************/
+.notifications-macro {
+  display: inline-block;
+  max-width: 500px;
+  min-height: 50px;
+  width: 100%;
+}
+
+.notifications-macro-rss-link {
+  text-align: right;
+}
+
+/***********************************************
+ * Notification Event
+ ***********************************************/
+.notification-event {
+  border: 1px dashed #E8E8E8;
+  padding: 1em;
+}
+
+.notification-event-unread {
+  background-color: #fff;
+}
+
+/***********************************************
+ * Notification Icons
+ ***********************************************/
+.notification-icon {
+  padding-right: 0;
+  position: relative;
+}
+
+.notification-icon .img-thumbnail {
+  background-color: #FFFFFF;
+  font-size: 2em;
+  height: 2em;
+  text-align: center;
+  width: 2em;
+}
+
+.notification-icon .img-thumbnail.small{
+  font-size: 1em;
+  height: 2em;
+  left: 0.5em;
+  padding: 0.1em;
+  position: absolute;
+  bottom: -0.8em;
+  width: 2em;
+}
+
+.notification-icon .img-thumbnail span {
+  vertical-align: middle;
+}
+
+/***********************************************
+ * Notification Content
+ ***********************************************/
+.notification-content {
+  padding: 0 2.6em 0 0.5em;
+}
+
+.notification-content blockquote {
+  font-size: 1.0em;
+  margin-bottom: 0.5em;
+  padding: 0 0.8em;
+}
+
+.notification-event-user > img {
+  height: 16px;
+  width: 16px;
+  /* Don't work for Internet Explorer nor Edge 15 */
+  object-fit: cover;
+  object-position: center;
+}
+
+/***********************************************
+ * Notification Buttons
+ ***********************************************/
+.notification-event-read-button, .toggle-notification-event-details {
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  position: absolute;
+  right: 10px;
+  width: 2em;
+  z-index: 1;
+}
+
+.notification-event-read-button {
+  top: -6px;
+}
+
+.toggle-notification-event-details {
+  bottom: -6px;
+}
+
+/***********************************************
+ * Notification Details
+ ***********************************************/
+.notification-event-details {
+  font-size: 0.8em;
+  margin: 1em 0 0 0;
+}
+
+.notification-event-details td {
+  border: 0;
+  overflow: hidden;
+  padding: 2px;
+  text-overflow: ellipsis;
+  width: 33%;
+}
+
+.notification-event-details td.description {
+  width: 45%;
+}
+
+/***********************************************
+ * Notifications Footer
+ ***********************************************/
+.notifications-load-more {
+  cursor: pointer;
+  min-height: 2em;
+}
+
+.notifications-load-more:hover {
+  background-color: #eeeeee;
+}
+
+.notifications-load-more p {
+  margin: 0;
+  padding: 0.7em;
+}
